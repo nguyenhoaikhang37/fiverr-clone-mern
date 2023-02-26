@@ -20,7 +20,7 @@
   3. Allow percentage-based heights in the application
 */
 html {
-    font-size: 62.5; /* (62.5/100) * 16px = 10px */
+    font-size: 62.5%; /* (62.5/100) * 16px = 10px */
 }
 html,
 body {
@@ -28,11 +28,9 @@ body {
 }
 /*
   Typographic tweaks!
-  4. Add accessible line-height
   5. Improve text rendering
 */
 body {
-    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
 }
 /*
@@ -105,13 +103,55 @@ label,
 button,
 select,
 summary,
-[type="radio"],
-[type="submit"],
-[type="checkbox"] {
+[type='radio'],
+[type='submit'],
+[type='checkbox'] {
     cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 body {
     font-size: 1.6rem;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --primary-color: #013914;
+    --light-green-color: #1dbf73;
+}
+
+// COMMON
+.container {
+    max-width: 1400px;
+    width: calc(100% - 30px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    &--text {
+        all: unset;
+        cursor: pointer;
+    }
+    &--outline {
+        color: white;
+        border: 1px solid white;
+        background-color: transparent;
+
+        &:hover {
+            background-color: #1dbf73;
+            border-color: #1dbf73;
+        }
+    }
 }

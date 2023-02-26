@@ -1,0 +1,21 @@
+.product-item {
+    position: relative;
+    height: 344px;
+    .img {
+        object-fit: contain;
+        height: 100%;
+    }
+    .info {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        color: #fff;
+    }
+    .title {
+        font-weight: 300;
+    }
+    .name {
+        font-size: 2.4rem;
+        font-weight: 500;
+    }
+}
